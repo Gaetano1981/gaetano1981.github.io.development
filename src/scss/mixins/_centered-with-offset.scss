@@ -1,0 +1,8 @@
+@mixin centered-with-offset($offsetX,$offsetY) {
+    $x: 50% + $offsetX;
+    $y: 50% + $offsetY;
+    position: absolute;
+	top: $y;
+	left: $x;
+	transform: translate(-$x, -$y);
+}

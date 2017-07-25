@@ -1,0 +1,17 @@
+.about-me {
+	text-align: center;
+	background-color: $color-mustard;
+	padding: 4%;
+
+	@include font-manager("about-me-title");
+
+	span {
+		padding-top: 2%;
+		display: inline-block;
+		//width: 900px;
+		text-align: center;
+
+		@include font-manager("about-me");
+	}
+}
+

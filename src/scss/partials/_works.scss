@@ -1,0 +1,70 @@
+.work {
+	&-container {
+		position: relative;
+		width: 50%;
+		display: inline-block;
+
+		%overlay {
+			position: absolute;
+			content: " ";
+			display: block;
+			opacity: 0.8;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+		}
+
+		.overlayWithColor1 {
+			@extend %overlay;
+			background-color: $color-super-light-gray;
+		}
+
+		.overlay1Hovered {
+			background: linear-gradient(to right, lighten($color-super-light-gray, 40%), darken($color-super-light-gray, 40%));
+		}
+
+		.overlayWithColor2 {
+			@extend %overlay;
+			background-color: $color-coral;
+		}
+
+		.overlay2Hovered {
+			background: linear-gradient(to left, lighten($color-coral, 40%), darken($color-coral, 40%));
+		}
+
+		%title {
+			@include centered-with-offset(0,0);
+			@include font-manager("work-title");
+			width: 80%;
+			text-align: center;
+		}
+
+		.titleWithColor1 {
+			@extend %title;
+			color: $color-coral;
+			z-index: 1000;
+		}
+
+		.titleWithColor2 {
+			@extend %title;
+			color: $color-super-light-gray;
+			z-index: 1000;
+		}
+
+		@include mq('desktop-wide', max) {
+			width: 100%;
+		}
+	}
+
+	&-image {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+
+		&::before {
+			// bug fix in IE, white space between images
+			margin-top: -5px;
+		}
+	}
+}
+

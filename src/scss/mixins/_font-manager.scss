@@ -1,0 +1,128 @@
+@mixin font-manager($input) {
+	@if ($input=="tab-left")
+	{
+		// dynamic tabs used now: line got obsolete
+		// color: $color-coral;
+	}
+	@elseif ($input=="tab-right")
+	{
+		// dynamic tabs used now: line got obsolete
+		// color: $color-white;
+	}
+	@elseif ($input=="header-tabs")
+	{
+		font-family: 'WorkSansMedium', serif;
+		text-transform: uppercase;
+		font-size: 20px;
+		@include mq('desktop-wide', max) {
+			font-size: 32px;
+		}
+	}
+	@elseif ($input=="header-text") {
+		font-family: 'WorkSansExtraBold', serif;
+		font-size: 70px;
+		@include mq('desktop-wide', max) {
+			font-size: 8vw;
+		}
+ 		text-transform: uppercase;
+		color: $color-white;
+	}
+	@elseif ($input=="header-subtext") {
+		font-family: 'WorkSansLight', serif;
+		font-size: 38px;
+		@include mq('desktop-wide', max) {
+			font-size: 6vw;
+		}
+ 		text-transform: uppercase;
+		color: $color-white;
+	}
+	@elseif ($input=="about-me-title")
+	{
+		font-family: 'WorkSansBlack', serif;
+		font-size: 36px;
+		color: $color-white;
+		@include mq('desktop-wide', max) {
+			font-size: 5vw;
+		}
+	}
+	@elseif ($input=="about-me")
+	{
+		font-family: 'WorkSansLight', serif;
+		// to be checked from design specs
+		font-size: 22px;
+		color: $color-white;
+		@include mq('desktop-wide', max) {
+			font-size: 28px;
+		}
+	}
+	@elseif ($input=="career-title")
+	{
+		font-family: 'WorkSansBold', serif;
+		font-size: 24px;
+		text-transform: uppercase;
+		@include mq('desktop-wide', max) {
+			font-size: 6vw;
+		}
+	}
+	@elseif ($input=="experiences")
+	{
+		font-family: 'WorkSansRegular', serif;
+		font-size: 20px;
+		@include mq('desktop-wide', max) {
+			font-size: 4vw;
+		}
+	}
+	@elseif ($input=="check-it-out-button") {
+		font-family: 'WorkSansSemiBold', serif;
+		font-size: 24px;
+		text-transform: uppercase;
+		color: $color-white;
+		@include mq('desktop-wide', max) {
+			font-size: 4vw;
+		}
+	}
+	@elseif ($input=="curious") {
+		font-family: 'WorkSansExtraBold', serif;
+		// to be checked from design specs
+		font-size: 64px;
+		color: $color-white;
+	}
+	@elseif ($input=="lets-connect") {
+		font-family: 'WorkSansExtraBold', serif;
+		font-size: 36px;
+		text-transform: uppercase;
+	}
+	@elseif ($input=="work-title") {
+		font-family: 'WorkSansExtraBold', serif;
+		font-size: 36px;
+		text-transform: uppercase;
+	}
+	@elseif ($input=="project-title") {
+		font-family: 'WorkSansExtraBold', serif;
+		font-size: 2.5vw;
+		@include mq('desktop-wide', max) {
+		    font-size: 5vw;
+	    }
+		text-transform: uppercase;
+		color: $color-coral;
+	}
+	@elseif ($input=="project-description") {
+		font-family: 'WorkSansRegular', serif;
+		font-size: 20px;
+		@include mq('desktop-wide', max) {
+		    font-size: 3vw;
+	    }
+	}
+	@elseif ($input=="view-online") {
+		font-family: 'WorkSansBold', serif;
+		font-size: 20px;
+	}
+	@elseif ($input=="slideshow-title") {
+		font-family: 'WorkSansRegular', serif;
+		font-size: 1.46vw;
+	}
+	@elseif ($input=="slideshow-text") {
+		font-family: 'WorkSansRegular', serif;
+		font-size: 1.46vw;
+	}
+}

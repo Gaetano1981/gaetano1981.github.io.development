@@ -1,0 +1,9 @@
+
+.skills-icon {
+    width: auto;
+    height: $skills-icon-height;
+    padding: $skills-icon-padding;
+    @include mq('desktop-wide', max) {
+        height: $mobile-skills-icon-height;
+	}
+}

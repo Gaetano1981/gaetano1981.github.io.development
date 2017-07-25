@@ -1,0 +1,43 @@
+
+.lets-connect {
+    height: 210px;
+    span {
+        @include font-manager("lets-connect");
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: $lets-connect-social-padding-vert;
+    }
+
+    &-socials-container {
+        text-align: center;
+        margin: 0 auto;
+        padding: $lets-connect-social-padding-top 0 $lets-connect-social-padding-vert 0;
+    }
+
+    &-social {
+        margin: auto $lets-connect-social-margin-lat;
+    }
+}
+
+.LetsConnectON {
+    background-color: $color-super-light-gray;
+    color: $color-coral;
+}
+
+.LetsConnectOFF {
+    background-color: $color-mustard;
+    color: $color-super-light-gray;
+}
+
+.socialColorHoverON {
+    &:hover {
+	    color: $color-mustard;
+	}
+}
+
+.socialColorHoverOFF {
+    &:hover {
+        color: $color-coral;
+    }
+}

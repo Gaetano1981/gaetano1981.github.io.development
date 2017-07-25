@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+    <project-title>
+        FairSource
+    </project-title>
+    <project-description>
+        Fairsource requested a new website which had to be connected to a CMS with the possibility to add articles/PDF's to the website itself. Together with a Scrum team I was responsible for the frontend and backend of the website. I worked on page scrolling animations using JavaScript, and after that I've been involved in connecting the website content to WordPress. PHP functions were implemented for this purpose. The overall styling was generated using SCSS. To optimize the workflow we used Gulp.
+    </project-description>
+
+    <technology>
+        <title></title>
+        <description></description>
+        <stripColor></stripColor>
+        <imageFilename>images/work/fairsource@2x.jpg</imageFilename>
+    </technology>
+
+    <technology>
+        <title></title>
+        <description></description>
+        <stripColor></stripColor>
+        <imageFilename>images/work/fairsource2@2x.jpg</imageFilename>
+    </technology>
+
+    <technology>
+        <title></title>
+        <description></description>
+        <stripColor></stripColor>
+        <imageFilename>images/work/fairsource3@2x.jpg</imageFilename>
+    </technology>
+
+</project>

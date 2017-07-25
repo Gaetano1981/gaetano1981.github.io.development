@@ -1,0 +1,15 @@
+<ul class="header-tabs">
+	<li
+		ng-click="ActivateTab('left'); leftActive=true; rightActive=false"
+		ng-class="{tabsOver: isHoverL, tabActive: (isHoverL||leftActive), tabInactive: isHoverR}" 
+		ng-mouseenter="isHoverL = true"
+		ng-mouseleave="isHoverL = false"
+		ng-init="leftActive = true"
+	>gaetano</li><!--
+	--><li 
+	ng-click="ActivateTab('right'); rightActive=true; leftActive=false"
+	ng-class="{tabsOver: isHoverR, tabActive: (isHoverR||rightActive), tabInactive: isHoverL}" 
+	ng-mouseenter="isHoverR = true"
+	ng-mouseleave="isHoverR = false"
+	>work</li>
+</ul>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+    <project-title>
+        Competa.com
+    </project-title>
+    <project-description>
+			Together with a Scrum team I was responsible for tasks related to new Competa IT official website frontend. I built skewed borders elements overlapping with skewed border images as background. For these tasks I did use the SVG to include images and applying path clipping. Other tasks were to create website sections in which I did use the flexboxes to properly align elements, and mixins in order to avoid repeated code across the project.
+    </project-description>
+
+    <technology>
+        <title></title>
+        <description></description>
+        <stripColor></stripColor>
+        <imageFilename>images/work/Competasite@2x.jpg</imageFilename>
+    </technology>
+
+    <technology>
+        <title></title>
+        <description></description>
+        <stripColor></stripColor>
+        <imageFilename>images/work/Competasite2@2x.jpg</imageFilename>
+    </technology>
+
+    <technology>
+        <title></title>
+        <description></description>
+        <stripColor></stripColor>
+        <imageFilename>images/work/Competasite3@2x.jpg</imageFilename>
+    </technology>
+
+</project>

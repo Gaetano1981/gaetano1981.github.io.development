@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/work-sans" type="text/css">
+	<!--<link rel='stylesheet' media="screen" href='src/style/font-library.css' type='text/css' />-->
+	<link rel='stylesheet' href='src/style/style.css' type='text/css' media='all' />
+</head>
+<body ng-app="portfolioApp" ng-controller="mainCtrl">
+
+<header ng-include="'views/header-tabs.html'"></header>
+
+<div 
+	class="left-activated" 
+	ng-hide="!leftActivated" 
+	ng-include="'views/left-activated.html'"
+	ng-controller="tabActivatedCtrl"
+	onload="loaded('left');"
+></div>
+
+<div 
+	class="right-activated" 
+	ng-hide="!rightActivated" 
+	ng-include="'views/right-activated.html'"
+	ng-controller="tabActivatedCtrl"
+	onload="loaded('right');"
+></div>
+
+<section class="projects-slideshow">
+	<div 
+		ng-include="'views/slideshow.html'"
+    ng-show="details">
+	</div>
+	<div class="project-details"
+		ng-show="details && isProjectLoaded">
+		<span class="title">{{project_title}}</span>
+		<p class="description">{{project_description}}</p>
+		<div class="view-online">
+			<i class="fa fa-window-maximize window-maximize" aria-hidden="true"></i>
+			<span >View online</span>
+		</div>
+	</div>
+</section>
+
+<footer class="lets-connect" ng-class="(details||rightActivated) ? 'LetsConnectOFF' : 'LetsConnectON'" ng-include="'views/lets-connect.html'"></footer>
+
+<script src="js/vendors/font-awesome.js"></script>
+<script src="js/vendors/angular-164.js"></script>
+<script src="js/utilities.js"></script>
+<script src="js/angular.components.js"></script>
+
+</body>
+</html>

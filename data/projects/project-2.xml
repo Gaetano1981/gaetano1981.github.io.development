@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+    <project-title>
+        Fair Trade Software Foundation
+    </project-title>
+    <project-description>
+        Together with a Scrum team I was responsible for the frontend and backend of the website. The website design contains two forms built by wordpress plug-in called CF7. The code needed to be refactored to make it cleaner and bug free, and the SASS code was made DRY, using SASS mixins and extends. In a second step I was involved in writing JavaScript and PHP code in order to customize the behaviour of the CF7 form. More specifically data from the contact form were inserted into the database.
+    </project-description>
+
+    <technology>
+        <title></title>
+        <description></description>
+        <stripColor></stripColor>
+        <imageFilename>images/work/ftsf@2x.jpg</imageFilename>
+    </technology>
+
+    <technology>
+        <title></title>
+        <description></description>
+        <stripColor></stripColor>
+        <imageFilename>images/work/ftsf2@2x.jpg</imageFilename>
+    </technology>
+
+</project>

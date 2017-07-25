@@ -1,0 +1,33 @@
+.project-details {
+    color: $color-coral;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 $project-horiz-padding 0 $project-horiz-padding;
+    @include mq('desktop-wide', max) {
+	    padding: 0 $mobile-project-horiz-padding 0 $mobile-project-horiz-padding;
+	}
+    .title {
+        margin-top: 5%;
+        @include font-manager("project-title");
+    }
+    .description {
+        margin-top: 5%;
+        @include font-manager("project-description");
+    }
+    .view-online {
+        display: flex;
+        justify-content: flex-start;
+        span {
+            padding-top: 0.1vw;
+            padding-left: 2%;
+            @include font-manager("view-online");
+        }
+        padding-top: 5%;
+        padding-bottom: 15%;
+        @include mq('desktop-wide', max) {
+            padding-top: 10%;
+            padding-bottom: 30%;
+	    }
+    }
+}

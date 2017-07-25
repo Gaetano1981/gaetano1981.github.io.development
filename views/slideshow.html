@@ -1,0 +1,41 @@
+
+
+<div class="slideshow-container">
+
+  <div ng-repeat="obj in projectData track by $index" class="mySlides fade" slideshow>
+    <div class="slideshow-numbertext">{{$index+1}} / {{projectData.length}}</div>
+  
+    <!--<div
+      class="slideshow-title"
+      data-ng-style="{
+        'background-image': 'url({{obj.imageFilename}})',
+        'background-size': '100vw',
+        'background-repeat': 'no-repeat',
+        'background-position': 'center'
+      }"
+    >-->
+
+    <img class="slideshow-title" ng-src="{{obj.imageFilename}}" />
+
+    <!--'background-color': '{{obj.color}}';-->
+    <!--{{obj.title}}-->
+  </div>
+  <!--<div class="slideshow-text">{{obj.description}}</div>-->
+
+  <!-- end of ng-repeat -->
+
+  <a class="slideshow-prev" ng-click="plusSlides(-1)" slideshow>&#10094;</a>
+  <a class="slideshow-next" ng-click="plusSlides(1)" slideshow>&#10095;</a>
+
+  <div class="slideshow-dot-buttons" slideshow>
+    <span 
+      ng-repeat="obj in projectData track by $index" 
+      class="slideshow-dot" 
+      ng-class="{slideshowDotOver: ($index==slideIndex-1)}" 
+      ng-click="currentSlide($index+1)">
+    </span>
+  </div>
+
+</div>
+
+

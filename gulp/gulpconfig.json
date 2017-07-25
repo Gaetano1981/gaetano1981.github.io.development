@@ -1,0 +1,15 @@
+{
+	"sass" : {
+		"source": "./src/scss/**/**.scss",
+		"destination": "./src/css/"
+	},
+    "concatCss" : {
+        "source": "./src/css/**.css",
+        "concatTo": "style.css",
+        "destination": "./src/style/"
+    },
+    "minifyCss" : {
+        "source": "./src/style/style.css",
+		"destination": "./src/style/"
+    }
+}

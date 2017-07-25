@@ -1,0 +1,91 @@
+
+.career {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+
+	i {
+		margin-top: 15%;
+		&:hover {
+			color: $color-mustard;
+		}
+	}
+	
+	@include mq('desktop-wide', max) {
+		display: block;
+		width: 100%;
+	}
+
+	article {
+				
+		&:nth-of-type(1) {
+			background-color: $color-coral;
+			color: $color-white;
+			padding: $experiences-padding;
+			width: calc(100% - 2 * #{$experiences-padding});
+			@include mq('desktop-wide', max) {
+				padding-bottom: 10%;
+			}
+		}
+
+		&:nth-of-type(2) {
+			padding: $skills-padding;
+			width: calc(100% - 2 * #{$skills-padding});
+			background-color: $color-super-light-gray;
+		}
+
+		vertical-align: top;
+	}
+}
+
+.experiences {
+	&-more {
+		display: block;
+		margin-top: 15%;
+		@include font-manager("experiences");
+	}
+
+	@include font-manager("experiences");
+
+	&, .skills {
+    	display: block;
+		padding-top: 6%;
+	}
+
+	&, &-more, .linkedin {
+		text-align: left;
+	}
+
+	&-link {
+		font-weight: bold;
+	}
+}
+
+.career-title {
+    @include font-manager("career-title");
+}
+
+.experience {
+	display: block;
+	padding: 2% 0 2% 0;
+
+	&:not(:first-child) {
+		margin-top: 1%;
+		//border-top: 1px solid $color-white;
+	}
+
+	.date {
+		font-weight: 900;
+		font-size: 22px;
+		display: block;
+	}
+}
+
+.skills {
+	//position: relative;
+	&-flex {
+    	display: flex;
+    	justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}

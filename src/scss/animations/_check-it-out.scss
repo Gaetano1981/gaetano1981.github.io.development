@@ -1,0 +1,26 @@
+/*
+.checkitout-over {
+    &:hover {
+        transition: .4s ease-in;
+        filter: blur(3px);
+        transform: scale(1.1);
+    }
+    &:not(:hover) {
+        transition: .4s ease-in;
+        filter: blur(0);
+        transform: scale(1);
+    }
+}
+*/
+
+.checkitout-over-active {
+    transition: .4s ease-in;
+    filter: blur(3px);
+    transform: scale(1.1);
+}
+
+.checkitout-over-inactive {
+    transition: .4s ease-in;
+    filter: blur(0);
+    transform: scale(1);
+}

@@ -1,0 +1,22 @@
+<!-- to be removed ! -->
+<div class="right-activated" ng-hide="!rightActivated">
+	<div 
+		ng-repeat="work in works_data track by $index"
+		class="work-container">
+			<div 
+				ng-class="(($index-1)%4==0)||(($index-2)%4==0) ? 'overlayWithColor1' : 'overlayWithColor2'"
+				ng-click="ShowProjectDetails($event)"
+				view-name="{{work.project_data_filename}}">
+			</div>
+			<img
+				src="{{'images/work/'+work.project_image_filename}}" 
+				class="work-image" 
+			/>
+			<span
+				ng-click="ShowProjectDetails($event)"
+				view-name="{{work.project_data_filename}}"
+				ng-class="(($index-1)%4==0)||(($index-2)%4==0) ? 'titleWithColor1' : 'titleWithColor2'">
+				{{work.project_title}}
+			</span>
+	</div>
+</div>

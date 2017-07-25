@@ -1,0 +1,58 @@
+
+.check-it-out {
+    position: relative;
+    
+    &-button {
+        width: $checkitout-button-w;
+        height: $checkitout-button-h;
+        background-color: $color-mustard;
+        @include centered-with-offset(0, 20%);
+        text-align: center;
+        @include font-manager("check-it-out-button");
+        cursor: pointer;
+        @include mq('desktop-wide', max) {
+    	    width: $checkitout-button-w * 2;
+            height: $checkitout-button-h * 1.5;
+            top: 80%;
+        }
+
+        span {
+            width: 100%;
+            @include centered-with-offset(0,0);
+        }
+
+        &:hover {
+            background-color: darken($color-mustard, 10%);
+        }
+    }
+}
+
+.headphones {
+    &-photo {
+        width: 100%;
+        vertical-align: top;
+        @include mq('desktop-wide', max) {
+            display: none;
+        }
+    }
+    &-mobile {
+        min-height: 400px;
+        display: none;
+        @include mq('desktop-wide', max) {
+            display: inline-block;
+            width: 100%;
+            background-color: gray;
+        }
+    }
+}
+
+
+.curious {
+    width: 100%;
+    text-align: center;
+    @include font-manager("curious");
+    @include centered-with-offset(0,-20%);
+    @include mq('desktop-wide', max) {
+    	width: 90%;
+    }
+}

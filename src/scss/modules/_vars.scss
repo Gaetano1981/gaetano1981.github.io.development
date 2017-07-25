@@ -1,0 +1,33 @@
+// Breakpoint setup for media queries
+$breakpoints: ( 'phone': 400px, 'phone-wide': 480px, 'phablet': 560px, 'tablet-small': 640px, 'tablet': 768px, 'tablet-wide': 1024px, 'desktop': 1248px, 'desktop-wide': 1440px);
+
+$image-fix-margin-top: -3px; // must be negative
+$header-tabs-height: 40px + abs($image-fix-margin-top);
+
+$color-white: rgba(255,255,255,1);
+$color-coral: rgba(43,43,43,1);
+$color-mustard: rgba(235,194,0,1);
+$color-super-light-gray: #F8F8F8;
+
+$experiences-padding: 5%;
+$skills-padding: 5%;
+
+$skills-icon-padding: 6%;
+$skills-icon-height: 4.17vw;
+
+$lets-connect-social-padding-vert: 20px;
+$lets-connect-social-margin-lat: 23px;
+$lets-connect-social-padding-top: 40px;
+
+$project-horiz-padding: 20%;
+
+$checkitout-button-w: 20vw;
+$checkitout-button-h: 6vw;
+
+// mobile
+
+$mobile-skills-icon-height: 80px;
+
+$mobile-header-vert-padding: 5%;
+$mobile-project-horiz-padding: 5%;
+

@@ -1,0 +1,26 @@
+.sliding-middle-out-container {
+	position: absolute;
+	padding-bottom: 0.3vw;
+}
+
+.sliding-middle-out-line {
+	display: block;
+	margin: auto;
+	height: 0.3vw;
+	width: 0.1vw;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.sliding-middle-out-active {
+	width: 65%;
+	@include mq('desktop-wide', max) {
+		width: 75%;
+	}
+    background: $color-white;
+}
+
+.sliding-middle-out-inactive {
+    width: 0.1vw;
+    background: transparent;
+}

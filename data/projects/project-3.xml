@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+    <project-title>
+        Headcount
+    </project-title>
+    <project-description>
+        The Headcount project was built to provide an overview of company employees, trainees and interns classifing them by category, hiring dates and more attributes. A good data rapresentation was achieved by D3.js library for graphs. With a Scrum team I was responsible for building styled graphs. The frontend was implemented using AngularJS 1.6 and I was responsible for building an AngularJS controller and a service in order to make the graph connected to API data.
+    </project-description>
+
+    <technology>
+        <title></title>
+        <description></description>
+        <stripColor></stripColor>
+        <imageFilename>images/work/headcount@2x.jpg</imageFilename>
+    </technology>
+
+</project>

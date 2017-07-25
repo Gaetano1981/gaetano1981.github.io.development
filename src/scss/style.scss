@@ -1,0 +1,34 @@
+// Modules
+@import 'modules/_vars.scss';
+
+// Mixins
+@import 'mixins/_font-manager.scss';
+@import 'mixins/_centered-with-offset.scss';
+@import 'mixins/_mq.scss';
+
+// Animations
+@import 'animations/_check-it-out.scss';
+@import 'animations/_underline.scss';
+
+// Partials
+@import 'partials/_general.scss';
+@import 'partials/_slideshow.scss';
+// left tab activated
+@import 'partials/_header.scss';
+@import 'partials/_about-me.scss';
+@import 'partials/_career.scss';
+@import 'partials/_skills-icons.scss';
+@import 'partials/_check-it-out.scss';
+@import 'partials/_lets-connect.scss';
+// right tab activated
+@import 'partials/_works.scss';
+@import 'partials/_project-details.scss';
+
+// mobile
+// @import 'mobile/_justamobile.scss';
+
+// Pages
+// @import 'pages/_justapage.scss';
+
+// vendor
+@import 'vendor/_normalize.scss';
