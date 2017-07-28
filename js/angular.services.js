@@ -5,10 +5,7 @@
 		var xmlGetElement = function(parent, name) {
 			var out = '';
 			var e = parent.getElementsByTagName(name)[0];
-			if (e) {
-				var c = e.childNodes[0];
-				if (c) out = c.nodeValue;
-			}
+			if (e) { var c = e.childNodes[0]; if (c) out = c.nodeValue; }
 			return out;
 		}
 		
