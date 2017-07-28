@@ -17,6 +17,9 @@
             window.scrollTo(0, 0);
         };
         $scope.ShowProjectDetails = function(elem) {
+            // Not done by Angular, should be improved:
+            window.scrollTo(0, 0);
+
             $scope.projectData = [];
             $scope.leftActivated = false;
             $scope.rightActivated = false;
@@ -42,6 +45,4 @@
     }
     tabActivatedCtrl.$inject = ['$scope'];
     app.controller('tabActivatedCtrl', tabActivatedCtrl);
-	
-    return app;
 })(app);
