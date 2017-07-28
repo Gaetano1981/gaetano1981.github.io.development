@@ -1,8 +1,6 @@
-(function() {
+(function(app) {
 
-    var app = angular.module('portfolioApp', []);
-
-    var mainCtrl = function($scope, $http) {
+    var mainCtrl = function($scope, $http, DataService) {
 
         $scope.isProjectLoaded = false;
         $scope.project_title = '';
@@ -19,18 +17,6 @@
             window.scrollTo(0, 0);
         };
         $scope.ShowProjectDetails = function(elem) {
-
-            var xmlGetElement = function(parent, name) {
-                var out = '';
-                var e = parent.getElementsByTagName(name)[0];
-                if (e) {
-                    var c = e.childNodes[0];
-                    if (c)
-                        out = c.nodeValue;
-                    }
-                return out;
-            }
-
             $scope.projectData = [];
             $scope.leftActivated = false;
             $scope.rightActivated = false;
@@ -38,64 +24,13 @@
             var key = elem.target.getAttribute('view-name');
             if (key != null && key.indexOf('.xml') != -1) {
                 var extendedKey = 'data/projects/' + key;
-                $http.get(extendedKey).then(function(response) {
-                    var projectData = response.data;
-                    var parser = new DOMParser();
-                    var projectXML = parser.parseFromString(projectData, 'application/xml');
-                    var technologyList = projectXML.getElementsByTagName('technology');
-                    $scope.projectData = [];
-                    for (var i = 0; i < technologyList.length; i++) {
-                        var technology = technologyList[i];
-                        var title = xmlGetElement(technology, 'title');
-                        var description = xmlGetElement(technology, 'description');
-                        var color = xmlGetElement(technology, 'color');
-                        var imageFilename = xmlGetElement(technology, 'imageFilename');
-                        var projectItem = {};
-                        projectItem.title = title;
-                        projectItem.description = description;
-                        projectItem.color = color;
-                        projectItem.imageFilename = imageFilename;
-                        $scope.projectData.push(projectItem);
-                    }
-                    
-                    $scope.project_title = xmlGetElement(projectXML.getElementsByTagName('project')[0], 'project-title');
-                    $scope.project_description = xmlGetElement(projectXML.getElementsByTagName('project')[0], 'project-description');
-                    $scope.isProjectLoaded = true;
-                }, function() { 
-                    $scope.isProjectLoaded = false;
-                    $scope.project_title = '';
-                    $scope.project_description = '';
-                });
+                $scope = DataService.GetProjectsData(extendedKey, $scope);
             }
         };
 
-        $scope.works_data = (function() { 
-            // why this code is executed more than one time
-            return [
-                {
-                    'project_title': 'FairSource',
-                    'project_data_filename': 'project-1.xml',
-                    'project_image_filename': 'fairsource@1x.jpg'
-                },
-                {
-                    'project_title': 'Fair Trade Software Foundation',
-                    'project_data_filename': 'project-2.xml',
-                    'project_image_filename': 'ftsf@1x.jpg'
-                },
-                {
-                    'project_title': 'Headcount',
-                    'project_data_filename': 'project-3.xml',
-                    'project_image_filename': 'headcount@1x.jpg'
-                },
-                {
-                    'project_title': 'Competa.com',
-                    'project_data_filename': 'project-4.xml',
-                    'project_image_filename': 'Competasite@1x.jpg'
-                }
-            ];
-        }());
+        $scope.works_data = GetData();
     };
-    mainCtrl.$inject = ['$scope', '$http'];
+    mainCtrl.$inject = ['$scope', '$http', 'DataService'];
     app.controller('mainCtrl', mainCtrl);
 
     var tabActivatedCtrl = function($scope) {
@@ -151,5 +86,6 @@
         }
     };
     app.directive('slideshow', slideshow);
-	
-})();
+
+    return app;
+})(app);
