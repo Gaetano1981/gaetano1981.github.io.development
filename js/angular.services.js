@@ -1,4 +1,4 @@
-(function() {
+(function(app) {
 	
 	app.service('DataService', function($http) {
 

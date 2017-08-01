@@ -57,8 +57,16 @@ a {
   color: inherit;
   text-decoration: none; }
 
+textarea {
+  resize: none; }
+
 .linkedin {
   font-size: 72px !important; }
+
+.paper-plane {
+  font-size: 62px !important;
+  position: relative;
+  left: 50px; }
 
 .github {
   font-size: 72px !important; }
@@ -450,6 +458,41 @@ header ul {
 
 .socialColorHoverOFF:hover {
   color: #2b2b2b; }
+
+.contact-me-view {
+  position: relative;
+  text-align: center; }
+
+.contact-me-off {
+  width: 0;
+  position: absolute; }
+  .contact-me-off textarea {
+    height: 0;
+    opacity: 0; }
+
+.contact-me-on {
+  display: block;
+  position: fixed;
+  top: calc(50% - 15%);
+  left: -1%;
+  width: 50%;
+  height: 30%;
+  z-index: 1;
+  background-color: #ebc200;
+  border-radius: 10px;
+  -webkit-transition: width 1s;
+  /* Safari */
+  transition: width 1s; }
+  .contact-me-on textarea {
+    width: 60%;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(50%);
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-transition: width 1s;
+    /* Safari */
+    transition: width 1s; }
 
 .work-container {
   position: relative;

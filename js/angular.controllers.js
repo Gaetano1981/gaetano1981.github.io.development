@@ -1,7 +1,6 @@
 (function(app) {
 
     var mainCtrl = function($scope, $http, DataService) {
-
         $scope.isProjectLoaded = false;
         $scope.project_title = '';
         $scope.project_description = '';
@@ -45,4 +44,24 @@
     }
     tabActivatedCtrl.$inject = ['$scope'];
     app.controller('tabActivatedCtrl', tabActivatedCtrl);
+
+    var contactmeCtrl = function($scope, $http) {
+        $scope.toggle_count = 0;
+        $scope.message = '';
+
+        $scope.Count = function() {
+            $scope.toggle_count++;
+
+            if ($scope.toggle_count %2 == 0 && $scope.message != '') {
+				// send me an e-mail feature to be implemented here
+            }
+        }
+
+        $scope.UpdateMessage = function() {
+            $scope.message = this.contact_me_message_M;
+            $scope.viewscope = this;
+        }
+    }
+    contactmeCtrl.$inject = ['$scope', '$http'];
+    app.controller('contactmeCtrl', contactmeCtrl);
 })(app);
