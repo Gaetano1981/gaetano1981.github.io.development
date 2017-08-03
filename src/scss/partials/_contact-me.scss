@@ -1,0 +1,41 @@
+.contact-me-view {
+	position: relative;
+	text-align: center;
+}
+
+.contact-me-off {
+	width: 0;
+	position: absolute;
+
+	textarea {
+		height: 0;
+		opacity: 0;
+	}
+}
+
+.contact-me-on {
+	display: block;
+	position: fixed;
+	top: calc(50% - 15%);
+	left: -1%;
+	width: 50%;
+	height: 30%;
+	z-index: 1;
+	background-color: $color-mustard;
+	border-radius: 10px;
+
+	-webkit-transition: width 1s; /* Safari */
+	transition: width 1s;
+
+	textarea {
+		width: 60%;
+		z-index: 1;
+		top: 50%;
+		transform: translateY(50%);
+		padding: 10px;
+		border-radius: 5px;
+
+		-webkit-transition: width 1s; /* Safari */
+		transition: width 1s;
+	}
+}

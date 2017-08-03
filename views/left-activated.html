@@ -18,9 +18,15 @@
 			<span class="experience"><span class="date">03/2017-today:</span> Full stack developer</span>
 		</span>
 		<span class="experiences-more">Want to know more? <a class="experiences-link" href="https://www.linkedin.com/in/ggviolante/" target="_blank">Let's link!</a></span>
-		<a href="https://www.linkedin.com/in/ggviolante/" target="_blank">
-			<i class="fa fa-linkedin-square linkedin" aria-hidden="true"></i>
-		</a>
+		<div ng-controller="contactmeCtrl">
+			<a href="https://www.linkedin.com/in/ggviolante/" target="_blank">
+				<i class="fa fa-linkedin-square linkedin" aria-hidden="true"></i>
+			</a>
+			<a href="#!/contact-me" ng-click="Count();">
+				<i class="fa fa-paper-plane paper-plane" aria-hidden="true"></i>
+			</a>
+			<div ng-view class="contact-me-view" ng-class="(toggle_count%2==1) ? 'contact-me-on' : 'contact-me-off'"></div>
+		</div>
 	</article><!--
 	--><article>
 			<span class="career-title">skills</span>

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -49,17 +47,37 @@
 
 <footer class="lets-connect" ng-class="(details||rightActivated) ? 'LetsConnectOFF' : 'LetsConnectON'" ng-include="'views/lets-connect.html'"></footer>
 
-<script src="js/vendors/font-awesome.js"></script>
 <script src="js/vendors/angular-164.js"></script>
-<script src="js/database.js"></script>
-<script src="js/utilities.js"></script>
+<script src="js/vendors/angular-164-routing.js"></script>
+<script src="js/vendors/font-awesome.js"></script>
 
-<script src="js/angular.init.js"></script>
-<script src="js/angular.services.js"></script>
-<script src="js/angular.controllers.js"></script>
-<script src="js/angular.directives.js"></script>
+<!-- Instead of include each angular file, <gulp-angular-order> plugin 
+	is used to sort angular inclusions, the bundle.js is generated.
+	pay attention, all the filenames must end with one of these
+	keywords contained inside their filename:
+	
+	['service', 'controller', 'directive', 'filter', 'routes', 
+	'config', 'module']
 
-<script src="js/github.rest.js"></script>
+	read me:
+	https://www.npmjs.com/package/gulp-angular-order
+-->
+
+<!-- these are non-angular files. the plugin transfer their content into 
+the bundle file -->
+
+<!--<script src="js/database.js"></script>
+<script src="js/utilities.js"></script>-->
+
+<!--<script src="js/angular.init.js"></script>
+<script src="js/angular.service.js"></script>
+<script src="js/angular.controller.js"></script>
+<script src="js/angular.directive.js"></script>
+<script src="js/angular.routes.js"></script>-->
+
+<!--<script src="js/github.rest.js"></script>-->
+
+<script src="js/dist/bundle.js"></script>
 
 </body>
 </html>

@@ -39,7 +39,7 @@
 
             githubApi.username = 'Gaetano1981';
             githubApi.nameRepo = 'GitHubREST';
-            githubApi.header.Authorization = "token 2c27f9a48375523a43de2205954d2ebfb41e16db";
+            githubApi.header.Authorization = "token c85947553f3a767821af4e15f893ac6e1c38d88d";
         }
 
         function cout(str) {

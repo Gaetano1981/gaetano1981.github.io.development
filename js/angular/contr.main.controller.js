@@ -1,8 +1,7 @@
-(function(app) {
-
-    var mainCtrl = function($scope, $http, DataService) {
-
-        $scope.isProjectLoaded = false;
+angular
+.module('portfolioApp')
+.controller('mainCtrl', function($scope, $http, DataService) {
+    $scope.isProjectLoaded = false;
         $scope.project_title = '';
         $scope.project_description = '';
 
@@ -32,17 +31,4 @@
         };
 
         $scope.works_data = GetData();
-    };
-    mainCtrl.$inject = ['$scope', '$http', 'DataService'];
-    app.controller('mainCtrl', mainCtrl);
-
-    var tabActivatedCtrl = function($scope) {
-        $scope.loaded = function(where) {
-            if (where == 'left') {
-                documentLoadScriptByURL('js/animations.js', function() {});
-            }
-        }
-    }
-    tabActivatedCtrl.$inject = ['$scope'];
-    app.controller('tabActivatedCtrl', tabActivatedCtrl);
-})(app);
+});
