@@ -1,12 +1,13 @@
 angular
 .module('portfolioApp')
 .service('DataService', function($http) {
+	'use strict';
 	var xmlGetElement = function(parent, name) {
 		var out = '';
 		var e = parent.getElementsByTagName(name)[0];
-		if (e) { var c = e.childNodes[0]; if (c) out = c.nodeValue; }
+		if (e) { var c = e.childNodes[0]; if (c) { out = c.nodeValue; } }
 		return out;
-	}
+	};
 	
 	this.GetProjectsData = function (url, scope) {
 		$http.get(url).then(function(response) {
@@ -38,5 +39,5 @@ angular
 			scope.project_description = '';
 		});
 		return scope;
-	}
+	};
 });
